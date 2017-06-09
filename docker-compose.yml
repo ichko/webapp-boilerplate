@@ -15,6 +15,6 @@ services:
       - ./client:/root
     ports:
       - 4002:80
-    command: './node_modules/light-server/bin/light-server -s . -p 80'
+    command: 'npm start'
     depends_on:
       - api

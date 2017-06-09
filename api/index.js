@@ -32,6 +32,8 @@ let todos = new class Todos {
     }
 };
 
+todos.add('Finish R homework');
+todos.add('Explore docker');
 
 app.get('/todo', (req, res) => {
     let todos = Array.from(await todos.getAll());
