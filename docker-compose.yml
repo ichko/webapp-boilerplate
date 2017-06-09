@@ -1,0 +1,20 @@
+version: '3'
+services:
+  api:
+    image: node:7
+    working_dir: /root
+    volumes:
+      - ./api:/root
+    ports:
+      - 4001:80
+    command: 'npm start'
+  client:
+    image: node:7
+    working_dir: /root
+    volumes:
+      - ./client:/root
+    ports:
+      - 4002:80
+    command: './node_modules/light-server/bin/light-server -s . -p 80'
+    depends_on:
+      - api
