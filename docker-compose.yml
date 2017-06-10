@@ -6,7 +6,7 @@ services:
     volumes:
       - ./api:/root
     ports:
-      - 4001:80
+      - 8001:80
     command: 'npm start'
   client:
     image: node:7
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./client:/root
     ports:
-      - 4002:80
+      - 8002:80
     command: 'npm start'
     depends_on:
       - api
