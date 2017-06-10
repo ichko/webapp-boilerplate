@@ -1,5 +1,5 @@
 # WebApp Boilerplate
-Express api and vuejs front-end in separate docker containers.
+Express api and vue.js front-end in separate docker containers.
 
 Usage
 ```
@@ -10,4 +10,9 @@ npm install
 cd ..
 
 docker-compose up
+```
+
+Stop all docker containers
+```
+docker stop $(docker ps -aq)
 ```

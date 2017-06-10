@@ -37,7 +37,7 @@ todosRepository.add('Finish R homework');
 todosRepository.add('Explore docker');
 
 
-app.get('/', async (req, res) => {
+app.get('/todo', async (req, res) => {
     const todos = await todosRepository.getAll();
     res.json(todos);
 });
